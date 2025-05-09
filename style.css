@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-green: #37b48e;
+  --bg-mint: #cef0df;
+  --accent-yellow: #e4a23b;
+  --accent-pink: #c9569e;
+  --accent-zinc: #9cceab;
+  --soft-grey: #f8f9f9;
+}
+
+/* Reset & Base */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Poppins',Arial,sans-serif; background:var(--soft-grey); color:#222527; line-height:1.6; }
+a { color:var(--primary-green); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+/* Utility Classes (flex, grid, spacing, typography, etc.) */
+.container { max-width:1200px; margin:0 auto; padding:0 1rem; }
+.flex { display:flex; }
+.flex-col { flex-direction:column; }
+.items-center { align-items:center; }
+.justify-between { justify-content:space-between; }
+.text-center { text-align:center; }
+.gap-2 { gap:.5rem; } .gap-4 { gap:1rem; } .gap-6 { gap:1.5rem; }
+/* ... include other utility classes as needed ... */
+
+/* Navigation */
+nav { position:sticky; top:0; background:#fff; backdrop-filter:blur(4px); box-shadow:0 1px 2px rgba(0,0,0,0.05); border-bottom:1px solid #e5e7eb; z-index:30; }
+.nav-link { border-radius:.75rem; padding:.35rem .9rem; transition:background .15s,color .15s; }
+.nav-link:hover { background:var(--bg-mint); color:var(--accent-pink); }
+
+/* Header / Hero */
+header { background:var(--bg-mint); border-bottom:1px solid #e5e7eb; min-height:10rem; display:flex; align-items:center; justify-content:center; }
+.hero-gradient-bg { background:linear-gradient(112deg,#cdfcf4 0%,#f6fff7 100%); }
+.hero-title { font-size:2.25rem; font-weight:700; color:var(--primary-green); }
+.hero-subtitle { max-width:42rem; margin:1rem auto; color:#4b5563; }
+
+/* Cards */
+.card { background:#fff; border-radius:1rem; box-shadow:0 8px 24px rgba(55,180,142,0.11); padding:1rem; }
+.card-elevated { box-shadow:0 8px 24px rgba(55,180,142,0.11),0 1.5px 5px rgba(30,60,23,0.08); border-radius:1rem; }
+
+/* Buttons */
+button, .button-elevated { border:none; border-radius:9999px; padding:.75rem 1.5rem; cursor:pointer; transition:box-shadow .2s,filter .2s; }
+.button-elevated { box-shadow:0 4px 14px rgba(55,180,142,0.09); }
+.button-elevated:hover { filter:brightness(1.09); box-shadow:0 8px 24px rgba(55,180,142,0.16); background:var(--bg-mint); }
+
+/* Forms */
+input, select { width:100%; max-width:20rem; padding:.5rem .75rem; border:1px solid #d1d5db; border-radius:.25rem; }
+input:focus, select:focus { outline:2.5px solid var(--primary-green); outline-offset:2.5px; background:#fff; }
+
+/* Sections */
+section { padding:2rem 0; }
+.awards-section { background:var(--bg-mint); border-radius:1rem; margin-top:1rem; }
+
+/* Stats */
+.stat-card { background:#fff; border-radius:1rem; box-shadow:0 1px 3px rgba(0,0,0,0.1); padding:1rem; }
+.stat-card div:first-child { font-size:1.5rem; font-weight:700; color:var(--primary-green); }
+
+/* Responsive Breakpoints */
+@media (max-width:768px) {
+  .md\:hidden { display:none; }
+  .md\:flex { display:flex; }
+  /* ... */
+}
+@media (max-width:640px) {
+  .hero-title { font-size:2rem; }
+  .hidden { display:none; }
+}
+
+/* Additional utility and component styles as in your original CSS... */
